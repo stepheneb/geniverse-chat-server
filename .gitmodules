@@ -1,0 +1,6 @@
+[submodule "chat"]
+	path = chat
+	url = git://github.com/psndcsrv/Geniverse-chat.git
+[submodule "faye"]
+	path = faye
+	url = git://github.com/psndcsrv/faye.git

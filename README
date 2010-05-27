@@ -1,0 +1,37 @@
+A rack application using thin and faye that implements a chat server for the Geniverse SproutCore application.
+
+Geniverse demos located here: http://geniverse.dev.concord.org/
+
+Geniverse SproutCore application repository: http://github.com/psndcsrv/Geniverse-SproutCore
+
+
+Setting up a local Geniverse chat server running on port 9292
+
+1) Install Ruby gem prerequisites:
+
+  <sudo> gem install rack sinatra thin
+
+2) Clone repository and submodules
+
+  clone
+  git submodule init
+  git submodule update
+
+3) Start the chat server on port 9292 using a daemonized thin
+
+  thin -d -p 9292 start
+
+You can check to see if the chat server is running with curl:
+
+  $ curl -I http://localhost:9292/chat/index.html
+  HTTP/1.1 200 OK
+  Last-Modified: Thu, 27 May 2010 16:22:21 GMT
+  Content-Type: text/html
+  Content-Length: 1244
+  Connection: keep-alive
+  Server: thin 1.2.7 codename No Hup
+
+The geniverse chat server uses a forked version of faye hosted here: http://github.com/psndcsrv/faye
+The main faye project: http://github.com/jcoglan/faye
+
+The chat code is located here: http://github.com/psndcsrv/Geniverse-chat
