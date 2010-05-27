@@ -9,7 +9,7 @@ Setting up a local Geniverse chat server running on port 9292
 
 1) Install Ruby gem prerequisites:
 
-  <sudo> gem install rack sinatra thin
+  <sudo> gem install rack sinatra thin eventmachine em-http-request json
 
 2) Clone repository and submodules
 
